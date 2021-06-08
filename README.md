@@ -2,7 +2,7 @@
 
 This repository creates a Docker image from the official ubuntu-base image. This allows us to further customize the ubuntu OS within a Docker image build and use Docker (with `docker import`) as an abstraction layer rather than doing a `chroot`. This has the benefit of being able to use docker build caches, as long as subsequent customization builds are executed on the same build agent.
 
-[![Build Status](https://digitecgalaxus.visualstudio.com/SystemEngineering/_apis/build/status/Github/DigitecGalaxus.ubuntu-base?branchName=master)](https://digitecgalaxus.visualstudio.com/SystemEngineering/_build/latest?definitionId=1165&branchName=main)
+[![Build Status](https://digitecgalaxus.visualstudio.com/SystemEngineering/_apis/build/status/Github/DigitecGalaxus.ubuntu-base?repoName=DigitecGalaxus%2Fubuntu-base&branchName=main)](https://digitecgalaxus.visualstudio.com/SystemEngineering/_build/latest?definitionId=1165&repoName=DigitecGalaxus%2Fubuntu-base&branchName=main)
 
 ## Prerequisites
 
