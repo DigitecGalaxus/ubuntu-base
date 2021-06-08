@@ -1,0 +1,19 @@
+trigger:
+- master
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DG Modules Container Registry'
+    command: 'login'
+    addPipelineData: false
+- script: ./build.sh
+  displayName: 'Build ubuntu base image'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DG Modules Container Registry'
+    repository: 'planetexpress/ubuntu-base'
+    command: 'Push'
+    Dockerfile: 'Dockerfile'
+    addPipelineData: false
+    tags: '21.04'
