@@ -11,15 +11,7 @@ This repository creates a Docker image from the official ubuntu-base image. This
 
 ## Usage
 
-Have the docker image from the prerequisites available locally or login to the image registry to be able to pull the  image.
-
-```sh
-az login
-az acr login --name anymodconrst001dg --expose-token
-
-# Use the token from the above command as password to the login
-docker login -u 00000000-0000-0000-0000-000000000000 anymodconrst001dg.azurecr.io
-```
+Have the docker image from the prerequisites available locally.
 
 Run the build script:
 
