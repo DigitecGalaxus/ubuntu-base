@@ -4,6 +4,9 @@ FROM anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:21.04-no-kernel
 # curl and jq are a prerequisite for the install-kernel-package script below
 RUN apt-get update -qq && apt-get install -y -qq jq curl
 
+# get NetbootIP and pass it to the install-kernel-package script
+ARG NETBOOT_IP
+
 # We have a file on an internal netboot server, which describes the latest kernel-version. This obviously won't work for a build which has no access to our internal network, so there is a fallback to a static kernel version.
-COPY install-kernel-package.sh install-kernel-package.sh
-RUN ./install-kernel-package.sh
+COPY install-kernel-package.sh install-kernel-package.sh 
+RUN ./install-kernel-package.sh $NETBOOT_IP

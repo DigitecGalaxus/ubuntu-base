@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
-kernelVersion=$(curl -s --connect-timeout 2 http://netboot.intranet.digitec/kernels/latest-kernel-version.json | jq -r .version)
+
+# Use netbootIP as a variable to retreive latest kernel version from a custom-defined netbootserver
+if [[ $# -lt 1 ]]; then
+        echo "Error: No arguments passed. Make sure to pass at least the Netboot IP Address"
+else
+        netbootIP="$1"
+fi
+
+kernelVersion=$(curl -s --connect-timeout 2 http://$netbootIP/kernels/latest-kernel-version.json | jq -r .version)
 
 if [[ "$kernelVersion" == "" ]]
 then
