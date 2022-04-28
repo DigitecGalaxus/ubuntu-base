@@ -19,9 +19,9 @@ docker cp $containerID:/var/live/tarball tarball
 docker rm -f $containerID
 
 # We have to explicitly name the image like the container registry here, otherwise AzureDevOps can't pick up the image correctly to push it
-cat tarball | docker import - "anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:21.04-no-kernel"
+cat tarball | docker import - "anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:22.04-no-kernel"
 
-docker image build --no-cache --build-arg NETBOOT_IP=$netbootIP -t anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:21.04 -f DockerfileKernelPackage .
+docker image build --no-cache --build-arg NETBOOT_IP=$netbootIP -t anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:22.04 -f DockerfileKernelPackage .
 
 rm -f tarball
 # The docker image push will be done by the pipeline

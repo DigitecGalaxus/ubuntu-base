@@ -19,4 +19,4 @@ steps:
     command: 'Push'
     Dockerfile: 'Dockerfile'
     addPipelineData: false
-    tags: '21.04'
+    tags: '22.04'
