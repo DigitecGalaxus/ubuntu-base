@@ -1,5 +1,5 @@
 # This docker image is the result of the Dockerfile in the same repository
-FROM anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:21.04-no-kernel
+FROM anymodconrst001dg.azurecr.io/planetexpress/ubuntu-base:22.04-no-kernel
 
 # curl and jq are a prerequisite for the install-kernel-package script below
 RUN apt-get update -qq && apt-get install -y -qq jq curl

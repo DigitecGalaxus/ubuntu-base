@@ -12,7 +12,7 @@ kernelVersion=$(curl -s --connect-timeout 2 http://$netbootIP/kernels/latest-ker
 
 if [[ "$kernelVersion" == "" ]]
 then
-  kernelVersion="5.11.0-16-generic"
+  kernelVersion="5.15.0-25-generic"
   echo "Warning: Using fallback static kernel version $kernelVersion"
 fi
 
