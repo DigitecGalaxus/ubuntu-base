@@ -4,6 +4,9 @@ variables:
 - name: netbootIP
   value: 10.1.30.4
 
+pool:
+  name: "planet-express-docker-agents"
+
 steps:
 - task: Docker@2
   inputs:
