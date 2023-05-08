@@ -4,6 +4,7 @@ set -e
 # Use netbootIP as a variable to retreive latest kernel version from a custom-defined netbootserver
 if [[ $# -lt 1 ]]; then
         echo "Error: No arguments passed. Make sure to pass at least the Netboot IP Address"
+        exit 1
 else
         netbootIP="$1"
 fi
