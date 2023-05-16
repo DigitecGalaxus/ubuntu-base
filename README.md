@@ -1,4 +1,9 @@
-# Introduction
+# This repository is archived
+
+> **Warning**
+> With the [pull request in DigitecGalaxus/thinclients](https://github.com/DigitecGalaxus/thinclients/pull/17), this repository is no longer needed and therefore archived. The functionality for installing kernel packages lives in the thinclients repository now.
+
+## Introduction
 
 This repository creates a Docker image from the official ubuntu-base image. This allows us to further customize the ubuntu OS within a Docker image build and use Docker (with `docker import`) as an abstraction layer rather than doing a `chroot`. This has the benefit of being able to use docker build caches, as long as subsequent customization builds are executed on the same build agent.
 
